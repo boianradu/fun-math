@@ -1,13 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './App.css'; // Import the CSS file
 
+import QuizComponent from './components/ui/QuizComponent';
+function HelloWorld() {
+  return <h1 className='greeting'>Hello, world!</h1>;
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <HelloWorld />
+    <div className='center-screen'>
+      <QuizComponent />
+    </div>
   </React.StrictMode>
 );
 
