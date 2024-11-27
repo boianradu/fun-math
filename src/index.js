@@ -1,24 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import reportWebVitals from './reportWebVitals';
+// import reportWebVitals from './reportWebVitals';
 import './App.css'; // Import the CSS file
 
-import QuizComponent from './components/ui/QuizComponent';
-function HelloWorld() {
-  return <h1 className='greeting'>Hello, world!</h1>;
-}
+// import QuizComponent from './components/ui/QuizComponent';
+
+import Quiz from './components/ui/Quiz';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HelloWorld />
     <div className='center-screen'>
-      <QuizComponent />
+      <Quiz></Quiz>
     </div>
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// reportWebVitals();

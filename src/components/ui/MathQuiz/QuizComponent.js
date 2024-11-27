@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import '../../App.css'; // Import the CSS file
+import '../../../App.css'; // Import the CSS file
+import Button from '@mui/material/Button';
+import { FormControl } from '@mui/material';
 
 // Sample quizzes array
 const quizzes = [
@@ -42,7 +44,7 @@ const QuizComponent = () => {
   return (
     <div className='quiz-container'>
       <h2>{currentQuiz.question}</h2>
-      <form>
+      <FormControl>
         {currentQuiz.options.map((option, index) => (
           <div key={index}>
             <label>
@@ -57,14 +59,14 @@ const QuizComponent = () => {
             </label>
           </div>
         ))}
-      </form>
-      <div className='button-container'>
-        <button
+      </FormControl>
+      <div>
+        <Button
           onClick={handleNextQuiz}
           disabled={!selectedAnswer} // Disable button if no answer is selected
         >
           Next
-        </button>
+        </Button>
       </div>
     </div>
   );
